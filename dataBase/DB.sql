@@ -1,15 +1,13 @@
-CREATE DATABASE sitepoint CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE sitepoint;
+CREATE DATABASE ferme CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE ferme;
 
-CREATE TABLE authors (
+CREATE TABLE user (
   id int(11) NOT NULL AUTO_INCREMENT,
-  name varchar(50),
-  city varchar(50),
+  first_name varchar(50),
+  last_name varchar(50),
   PRIMARY KEY (id)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+);
 
-INSERT INTO authors (id, name, city) VALUES
-(1, 'Michaela Lehr', 'Berlin'),
-(2, 'Michael Wanyoike', 'Nairobi'),
-(3, 'James Hibbard', 'Munich'),
-(4, 'Karolina Gawron', 'Wrocław');
+INSERT INTO user (first_name, last_name) VALUES
+("Matt","Lazana"),
+("Je","Go");
