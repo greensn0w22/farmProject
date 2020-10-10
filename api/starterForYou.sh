@@ -1,8 +1,18 @@
 sudo apt install npm
 npm init
-npm install nodemon
+echo '{
+  "name": "farm-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+},
+  "author": "",
+  "license": "ISC"
+}
+' > package.json
 
-#  "scripts": {
-#         "start": "node index",
-#         "dev": "nodemon index"
-#     },
+npm install --save-dev nodemon
+npm install mysql
