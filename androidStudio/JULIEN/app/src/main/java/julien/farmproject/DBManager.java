@@ -46,9 +46,7 @@ public class DBManager {
         }
         return cursor.getInt(0) + "";
     }
-
-
-
+    
 }
 //
 //    public Cursor fetch() {
