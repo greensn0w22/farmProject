@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 public class DBManager {
 
@@ -28,12 +29,27 @@ public class DBManager {
         dbHelper.close();
     }
 
-//    public void insert(String name, String desc) {
-//        ContentValues contentValue = new ContentValues();
-//        contentValue.put(DBHelper.SUBJECT, name);
-//        contentValue.put(DBHelper.DESC, desc);
-//        database.insert(DBHelper.TABLE_NAME, null, contentValue);
-//    }
+    public void insertTonnage(int userID, int nbPounds, String date_entry, int fieldID) {
+        ContentValues contentValue = new ContentValues();
+        contentValue.put(DBHelper.TONNAGE_COLUMN_NAME_USAGER_FK, userID);
+        contentValue.put(DBHelper.TONNAGE_COLUMN_NAME_DATE_ENTRY, date_entry);
+        contentValue.put(DBHelper.TONNAGE_COLUMN_NAME_FIELD_FK, fieldID);
+        contentValue.put(DBHelper.TONNAGE_COLUMN_NAME_NUMBER_OF_POUNDS, nbPounds);
+        contentValue.put(DBHelper.TONNAGE_COLUMN_NAME_IS_VALID, false);
+        database.insert(DBHelper.TONNAGE_TABLE_NAME, null, contentValue);
+    }
+
+    public String countTonnagesNotSended() {
+        Cursor cursor = database.query(DBHelper.TONNAGE_TABLE_NAME, new String[]{"count(*)"}, null, null, null, null, null);
+        if (cursor != null) {
+            cursor.moveToFirst();
+        }
+        return cursor.getInt(0) + "";
+    }
+
+
+
+}
 //
 //    public Cursor fetch() {
 //        String[] columns = new String[] { DBHelper._ID, DBHelper.SUBJECT, DBHelper.DESC };
@@ -56,4 +72,3 @@ public class DBManager {
 //        database.delete(DBHelper.TABLE_NAME, DBHelper._ID + "=" + _id, null);
 //    }
 
-}
