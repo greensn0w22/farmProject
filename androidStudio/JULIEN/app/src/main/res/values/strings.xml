@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">FarmProject</string>
+    <string name="usager_selectionnee">Usager selectionnée : </string>
+    <string name="nbTonnes">Nombres de tonnes : </string>
+    <string name="tonnes">Tonnes</string>
+    <string name="date">Date : </string>
+    <string name="bt_select_date">Selectionner la date</string>
+    <string name="field_selectionnee">Champ Selectionné : </string>
+    <string name="save_tonnage">Enregister le tonnage</string>
+    <string name="tonnage_need_to_send">Tonnages non envoyés : </string>
+    <string name="synchroniser_les_tonnages">Synchroniser les tonnages</string>
+    <string name="_0">0</string>
 </resources>
