@@ -10,4 +10,6 @@
     <string name="tonnage_need_to_send">Tonnages non envoyés : </string>
     <string name="synchroniser_les_tonnages">Synchroniser les tonnages</string>
     <string name="_0">0</string>
+    <string name="syncUsers">sync users</string>
+    <string name="sync_fields">sync champs</string>
 </resources>

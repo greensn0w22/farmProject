@@ -162,15 +162,51 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="307dp">
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="100dp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <Button
-            android:id="@+id/bt_syncToCloud"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="59dp"
-            android:text="@string/synchroniser_les_tonnages" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/bt_syncToCloud"
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:text="@string/synchroniser_les_tonnages" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt_get_users"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/syncUsers" />
+
+                <Button
+                    android:id="@+id/bt_get_fields"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/sync_fields" />
+            </LinearLayout>
+
+        </LinearLayout>
 
     </LinearLayout>
 
